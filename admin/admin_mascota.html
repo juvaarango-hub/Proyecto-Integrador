@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestionar Mascotas - VetControl</title>
+    <link rel="stylesheet" href="../estilos.css"/>
+</head>
+<body>
+
+    <div class="header">
+        <div class="contenedor-logo">
+        </div>
+        <div class="contenedor-titulo">
+            <h1>ADMINISTRACIÓN DE MASCOTAS</h1>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="menu">
+            <a href="menu_admin.html">Inicio</a>
+            <a href="admin_cliente.html">Gestionar Clientes</a>
+            <a href="admin_mascota.html"><b>Gestionar Mascotas</b></a>
+            <a href="admin_historia.html">Historia Clínica</a>
+            <br>
+            <div class="cierre-sesion">
+            <a href="../inicio.html" >Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="seccion-formulario">
+                <h3>Datos de la Nueva Mascota</h3>
+                <table border="0" style="border:none; width: auto;">
+                    <tr>
+                        <td>Nombre Mascota:</td>
+                        <td><input type="text" placeholder="Ej: Luna"></td>
+                        <td>Especie:</td>
+                        <td>
+                            <select>
+                                <option>Canino</option>
+                                <option>Felino</option>
+                                <option>Equino</option>
+                                <option>Otro</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Raza:</td>
+                        <td><input type="text" placeholder="Ej: Labrador / Criollo"></td>
+                        <td><b>Cliente (tutor mascota):</b></td>
+                        <td>
+                            <select style="width: 200px;">
+                                <option value="">-- Seleccione cliente (tutor mascota) --</option>
+                                <option value="1">Juan Pérez (ID: 1010)</option>
+                                <option value="2">María López (ID: 2020)</option>
+                                <option value="3">Carlos Ruiz (ID: 3030)</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button class="btn-guardar">Registrar Mascota</button>
+            </div>
+
+            <h3>Listado de Mascotas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Raza</th>
+                        <th>Tutor</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luna</td>
+                        <td>Felino</td>
+                        <td>Criollo</td>
+                        <td>María López</td>
+                        <td><a href="#" class="btn-modificar">Editar</a></td>
+                        <td><a href="#" class="btn-eliminar">Borrar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Toby</td>
+                        <td>Canino</td>
+                        <td>Golden Retriever</td>
+                        <td>Juan Pérez</td>
+                        <td><a href="#" class="btn-modificar">Editar</a></td>
+                        <td><a href="#" class="btn-eliminar">Borrar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* CONFIGURACIÓN BÁSICA */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #ffffff; /* Fondo blanco liso */
+}
+
+/* ENCABEZADO */
+.header {
+    background-color: #7AEBF9;
+    color: black;
+    display: flex; 
+    border-bottom: 2px solid black;
+    height: 130px; 
+}
+
+/* ESTRUCTURA DE COLUMNAS */
+.contenedor {
+    display: flex;
+}
+
+.contenedor-logo {
+    width: 220px; /* Exactamente el ancho de tu .menu */
+    background-color: transparent; /* Un gris diferente para resaltar el área del logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;    
+    background-image: url("/imagenes/Logo valenvet.png");
+    background-repeat: no-repeat; 
+    background-position: center;     
+    background-size: 180px;
+}
+
+.contenedor-titulo {
+    flex-grow: 1; /* Se estira para ocupar el resto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-header {
+    height: 10px; /* Tamaño del logo */
+    width: auto;
+}
+
+/* MENÚ LATERAL */
+.menu {
+    width: 200px;
+    background-color: #eeeeee;
+    min-height: 100vh;
+    border-right: 1px solid black;
+    padding: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 8px;
+    color: blue;
+    text-decoration: underline; /* Estilo clásico de enlace */
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+}
+
+.cierre-sesion a
+{
+color: red;
+}
+/* CONTENIDO */
+.contenido {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* TABLAS CLÁSICAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid black; /* Bordes negros sólidos */
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    background-color: #7AEBF9;
+}
+
+/* FORMULARIOS */
+.seccion-blanca {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+/* BOTONES PLANOS */
+.btn {
+    padding: 5px 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #f0f0f0;
+}
+
+.btn-guardar { background-color: #ffffff; font-weight: bold; }
+.btn-eliminar { background-color: #ffffff; color: red; }
+
+#caja-login { 
+    background-color: #C9E7F2; 
+    border: 2px solid #000; 
+    width: 300px; 
+    margin: 100px auto; 
+    padding: 20px; 
+}
+
+#caja-login img {
+    width: 180px;              
+    height: auto;              /* Mantiene la proporción */
+    margin-bottom: 10px;
+}
+
+#caja-login h2 {
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

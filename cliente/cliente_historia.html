@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial Médico - VetControl</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="contenedor-logo">
+        </div>
+        <div class="contenedor-titulo">
+            <h1>HISTORIAL MÉDICO</h1>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="menu">
+            <a href="menu_cliente.html">Inicio</a>
+            <a href="cliente_mascota.html">Mis Mascotas</a>
+            <a href="cliente_historia.html"><b>Historias Clínicas</b></a>
+            <hr>
+            <div class="cierre-sesion">
+            <a href="../inicio.html" >Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <h2>Consulta de Historias Clínicas</h2>
+            
+            <div class="seccion-blanca">
+                <label><b>Seleccione su Mascota:</b></label><br>
+                <select style="width: 300px;">
+                    <option>Toby (Canino)</option>
+                    <option>Rex (Canino)</option>
+                    <option>Pelusa (Felino)</option>
+                </select>
+                <button class="btn">Filtrar Historial</button>
+            </div>
+
+            <h3>Registros de Salud</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Médico</th>
+                        <th>Motivo de Consulta</th>
+                        <th>Diagnóstico / Observaciones</th>
+                        <th>Fórmula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10/05/2026</td>
+                        <td>Dr. Valentina Arango </td>
+                        <td>Control anual</td>
+                        <td>Paciente en buen estado. Esquema de vacunación al día.</td>
+                        <td><button class="btn">Ver PDF</button></td>
+                    </tr>
+                    <tr>
+                        <td>15/02/2026</td>
+                        <td>Dr. Felipe</td>
+                        <td>Otitis unilateral derecha</td>
+                        <td>Otitis externa en oído derecho. Se indica tratamiento con limpiador ótico.</td>
+                        <td><button class="btn">Ver PDF</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 20px;">
+                <b>Nota:</b> Para ver el detalle completo de la fórmula médica, haga clic en el botón <b>"Ver PDF"</b> de la columna correspondiente.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

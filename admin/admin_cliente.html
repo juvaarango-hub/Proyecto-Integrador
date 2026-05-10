@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestionar Clientes - VetControl</title>
+    <link rel="stylesheet" href="../estilos.css"/>
+</head>
+<body>
+
+    <div class="header">
+        <div class="contenedor-logo">
+        </div>
+        <div class="contenedor-titulo">
+            <h1>ADMINISTRACIÓN DE CLIENTES</h1>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="menu">
+            <a href="menu_admin.html">Inicio</a>
+            <a href="admin_cliente.html"><b>Gestionar Clientes</b></a>
+            <a href="admin_mascota.html">Gestionar Mascotas</a>
+            <a href="admin_historia.html">Historia Clínica</a>
+            <br>
+            <div class="cierre-sesion">
+            <a href="../inicio.html" >Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="seccion-formulario">
+                <h3>Datos del Nuevo Cliente</h3>
+                <table border="0" style="border:none; width: auto;">
+                    <tr>
+                        <td>Identificación:</td>
+                        <td><input type="text" placeholder="Ej: 102030"></td>
+                        <td>Nombre Completo:</td>
+                        <td><input type="text" style="width: 250px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono:</td>
+                        <td><input type="text"></td>
+                        <td>Correo:</td>
+                        <td><input type="email" style="width: 250px;"></td>
+                    </tr>
+                </table>
+                <br>
+                <button class="btn-guardar">Registrar Cliente</button>
+            </div>
+            <h3>Listado de Clientes Registrados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1010</td>
+                        <td>Juan Pérez</td>
+                        <td>3001234567</td>
+                        <td>juan.perez@email.com</td>
+                        <td><a href="#" class="btn-modificar">Editar</a></td>
+                        <td><a href="#" class="btn-eliminar">Borrar</a></td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>María López</td>
+                        <td>3119876543</td>
+                        <td>maria_l@email.com</td>
+                        <td><a href="#" class="btn-modificar">Editar</a></td>
+                        <td><a href="#" class="btn-eliminar">Borrar</a></td>
+                    </tr>
+                    <tr>
+                        <td>3030</td>
+                        <td>Carlos Ruiz</td>
+                        <td>3155554433</td>
+                        <td>cruiz@email.com</td>
+                        <td><a href="#" class="btn-modificar">Editar</a></td>
+                        <td><a href="#" class="btn-eliminar">Borrar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

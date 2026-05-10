@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio Admin - VetControl</title>
+    <link rel="stylesheet" href="../estilos.css"/>
+</head>
+<body>
+
+    <div class="header">
+        <div class="contenedor-logo">
+           
+        </div>
+        <div class="contenedor-titulo">
+            <h1>MÓDULO ADMIN</h1>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="menu">
+            <a href="menu_admin.html"><b>Inicio</b></a>
+            <a href="admin_cliente.html">Gestionar Clientes</a>
+            <a href="admin_mascota.html">Gestionar Mascotas</a>
+            <a href="admin_historia.html">Historia Clínica</a>
+            <br>
+
+            <div class="cierre-sesion">
+            <a href="../inicio.html" >Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <h2>Panel de Control - Resumen de Hoy</h2>
+            
+            <div class="fila-tarjetas">
+                <div class="tarjeta">
+                    <p>Clientes Nuevos</p>
+                    <h2>12</h2>
+                </div>
+                <div class="tarjeta">
+                    <p>Consultas Hoy</p>
+                    <h2>8</h2>
+                </div>
+                <div class="tarjeta">
+                    <p>Vacunaciones Hoy </p>
+                    <h2>3</h2>
+                </div>
+            </div>
+
+            <h3>Próximas Citas del Día</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Mascota</th>
+                        <th>Tutor</th>
+                        <th>Motivo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00 AM</td>
+                        <td>Toby</td>
+                        <td>Juan Pérez</td>
+                        <td>Vacunación</td>
+                        <td style="color: green;"><b>Confirmada</b></td>
+                    </tr>
+                    <tr>
+                        <td>09:30 AM</td>
+                        <td>Luna</td>
+                        <td>María López</td>
+                        <td>Control Post-Cirugía</td>
+                        <td style="color: orange;"><b>En espera</b></td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Pelusa</td>
+                        <td>Carlos Ruiz</td>
+                        <td>Desparasitación</td>
+                        <td>Pendiente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

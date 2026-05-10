@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia Clínica - VetControl</title>
+    <link rel="stylesheet" href="../estilos.css"/>
+</head>
+<body>
+
+    <div class="header">
+        <div class="contenedor-logo">
+        </div>
+        <div class="contenedor-titulo">
+            <h1>GESTIÓN CLÍNICA</h1>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="menu">
+            <a href="menu_admin.html">Inicio</a>
+            <a href="admin_cliente.html">Gestionar Clientes</a>
+            <a href="admin_mascota.html">Gestionar Mascotas</a>
+            <a href="admin_historia.html"><b>Historia Clínica</b></a>
+            <br>
+            <div class="cierre-sesion">
+            <a href="../inicio.html" >Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="ficha-medica">
+                <h2 align="center">HISTORIA CLÍNICA VETERINARIA</h2>
+                <p align="center" style="color: #666;">Formato oficial para consulta general    
+                <hr>
+
+                <div class="seccion-titulo">1. IDENTIFICACIÓN DEL PACIENTE</div>
+                <table>
+                    <tr>
+                        <td>
+                            <label>Propietario:</label>
+                            <select style="background-color: #ffffcc;">
+                                <option>Juan Pérez (CC: 123456)</option>
+                                <option>María López (CC: 987654)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label>Mascota:</label>
+                            <select>
+                                <option>Toby (Canino - Golden Retriever)</option>
+                                <option>Rex (Canino - Pastor Alemán)</option>
+                                <option>Pelusa (Felino - Persa)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Fecha Consulta:</label>
+                            <input type="date" value="2026-05-09">
+                        </td>
+                        <td>
+                            <label>Veterinario de Turno:</label>
+                            <input type="text" value="Dr. Felipe (Mat. Prof. 45678)" readonly style="background: #eee;">
+                        </td>
+                    </tr>
+
+                </table>
+                 <label>2. ANAMNESIS (MOTIVO DE CONSULTA):</label>
+                <textarea rows="4" placeholder="Ej: El paciente presenta vómito y decaimiento desde hace 2 días..."></textarea>
+
+
+                <div class="seccion-titulo">3. EXAMEN FÍSICO </div>
+                <label>Hallazgos clínicos (Examen por sistemas):</label>
+                <textarea rows="3" placeholder="Estado de mucosas, tiempo de llenado capilar, auscultación..."></textarea>
+                <br><br>
+                
+                <div class="seccion-titulo"> CONSTANTES FISIOLÓGICAS</div>
+                <table>
+                    <tr>
+                        <td><label>Peso (kg):</label><input type="number" step="0.1" placeholder="0.0"></td>
+                        <td><label>T° (°C):</label><input type="number" step="0.1" placeholder="38.5"></td>
+                        <td><label>FC (lat/min):</label><input type="text" placeholder="120"></td>
+                        <td><label>FR (res/min):</label><input type="text" placeholder="24"></td>
+                    </tr>
+                </table>
+
+                <div class="seccion-titulo">4. DIAGNÓSTICOs DIFERENCIALES </div>
+                <textarea rows="2" placeholder="Diagnóstico presuntivo o definitivo..."></textarea>
+
+                <div class="seccion-titulo">5. PRUEBAS DIAGNOSTICAS Y PLAN </div>
+                <div style="border: 1px dashed #333; padding: 15px; text-align: center; background: #fafafa;">
+                    <textarea rows="2" placeholder="Examenes recomendados por realizar..."></textarea>
+                </div>
+
+                <div class="seccion-formula">6. FÓRMULA MÉDICA (RECETARIO)</div>
+                <div style="border: 1px solid #c3e6cb; padding: 15px;">
+                    <label>Prescripción (Medicamentos, dosis y frecuencia):</label>
+                    <textarea rows="5" placeholder="1. Antibiótico: Aplicar 1ml vía IM cada 24h..."></textarea>
+                    <br><br>
+                    <table border="0">
+                        <tr>
+                            <td><label>Recomendaciones adicionales:</label>
+                                <input type="text" placeholder="Ej: Dieta blanda, hidratación constante">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <button type="submit" class="btn-finalizar">
+                    💾 GUARDAR HISTORIA Y FINALIZAR CONSULTA
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
