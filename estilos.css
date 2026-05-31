@@ -1,11 +1,24 @@
-/* CONFIGURACIÓN BÁSICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
-    margin: 0;
     background-color: #ffffff; /* Fondo blanco liso */
 }
 
-/* ENCABEZADO */
+.miltonian-tattoo-regular {
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: #4c8341;
+}
+
 .header {
     background-color: #7AEBF9;
     color: black;
@@ -14,22 +27,21 @@ body {
     height: 130px; 
 }
 
-/* ESTRUCTURA DE COLUMNAS */
 .contenedor {
     display: flex;
 }
 
 .contenedor-logo {
-    width: 220px; /* Exactamente el ancho de tu .menu */
-    background-color: transparent; /* Un gris diferente para resaltar el área del logo */
+    width: 220px; /* Alinear el ancho con el menú */
+    background-color: transparent; 
     display: flex;
     align-items: center;
     justify-content: center;
     border-right: 1px solid black;    
-    background-image: url("/imagenes/Logo valenvet.png");
+    background-image: url("imagenes/Logo\ valenvet.png");
     background-repeat: no-repeat; 
     background-position: center;     
-    background-size: 180px;
+    background-size: 130px; /* Ajustado para que quepa bien en los 130px de alto */
 }
 
 .contenedor-titulo {
@@ -39,40 +51,98 @@ body {
     justify-content: center;
 }
 
-.logo-header {
-    height: 10px; /* Tamaño del logo */
-    width: auto;
+#textoLogo {
+    text-align: center;
+    color: #5fa4b1;
+    font-size: 45px;
+    padding: 10px;
 }
 
-/* MENÚ LATERAL */
 .menu {
-    width: 200px;
+    width: 220px; /* Sincronizado con .contenedor-logo */
     background-color: #eeeeee;
     min-height: 100vh;
     border-right: 1px solid black;
-    padding: 10px;
+    padding: 15px;
+}
+
+.menu ul {
+    list-style: none;
 }
 
 .menu a {
     display: block;
-    padding: 8px;
+    padding: 10px;
     color: blue;
     text-decoration: underline; /* Estilo clásico de enlace */
     margin-bottom: 5px;
     border: 1px solid transparent;
+    font-weight: bold;
 }
 
-.cierre-sesion a
-{
-color: red;
+.cierre-sesion a {
+    color: red;
 }
-/* CONTENIDO */
+
 .contenido {
     padding: 20px;
     flex-grow: 1;
 }
 
-/* TABLAS CLÁSICAS */
+/* Bloques verdes responsivos*/
+.contenidoPpal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #1fb34a70;
+    padding: 40px;
+    border-radius: 8px; /* Bordes ligeramente suaves para diseño moderno */
+}
+
+.cajvideo {
+    width: 45%;
+    text-align: center;
+}
+
+.cajvideo img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+
+.video-responsivo {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+}
+
+.textoPpal {
+    width: 45%;
+}
+
+.textoPpal ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#servicios {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#image1-serv, #image2-serv, #image3-serv {
+    width: 25%;
+    height: 300px;
+    background-color: #a98556;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 2px gray;
+    margin-bottom: 20px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -81,15 +151,21 @@ table {
 
 table, th, td {
     border: 1px solid black; /* Bordes negros sólidos */
-    padding: 5px;
+    padding: 8px;
     text-align: left;
 }
 
 th {
     background-color: #7AEBF9;
+    font-weight: bold;
 }
 
-/* FORMULARIOS */
+caption {
+    font-size: 14px;
+    color: #4682B4;
+    margin-bottom: 5px;
+}
+
 .seccion-blanca {
     border: 1px solid black;
     padding: 15px;
@@ -99,13 +175,14 @@ th {
 input, select, textarea {
     margin-top: 5px;
     margin-bottom: 10px;
-    padding: 4px;
+    padding: 6px;
     border: 1px solid black;
+    width: 100%; /* Hace que los campos se adapten al contenedor */
+    max-width: 400px;
 }
 
-/* BOTONES PLANOS */
 .btn {
-    padding: 5px 10px;
+    padding: 6px 12px;
     border: 1px solid black;
     cursor: pointer;
     font-size: 14px;
@@ -121,15 +198,141 @@ input, select, textarea {
     width: 300px; 
     margin: 100px auto; 
     padding: 20px; 
+    text-align: center;
 }
 
 #caja-login img {
     width: 180px;              
-    height: auto;              /* Mantiene la proporción */
+    height: auto;              
     margin-bottom: 10px;
 }
 
 #caja-login h2 {
     text-align: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.btn-menu-hamburguesa, .chk-menu-toggle {
+    display: none;
+}
+
+
+/* --- TABLETS Y CELULARES (Menores a 850px) --- */
+@media (max-width: 850px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .contenedor-logo {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid black;
+        padding: 10px;
+        height: 90px;
+        background-size: 100px;
+    }
+
+    .contenedor-titulo h1 {
+        font-size: 20px;
+        padding: 15px 5px;
+    }
+
+    /* Modificamos el contenedor principal para que use modo columna */
+    .contenedor {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .btn-menu-hamburguesa {
+        display: block; /* Se muestra únicamente en móviles */
+        background-color: #eeeeee;
+        color: black;
+        padding: 12px;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 2px solid black;
+        cursor: pointer;
+        user-select: none;
+        font-size: 16px;
+    }
+
+    /* El menú lateral se convierte en el panel desplegable */
+    .menu {
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 2px solid black;
+        padding: 0;
+        
+        /* Efecto de colapso/desplegado por CSS */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out; /* Animación sutil al abrir */
+        background-color: #f7f7f7;
+    }
+
+    /* Estilos para los enlaces dentro del menú colapsado */
+    .menu a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 0;
+        background-color: #ffffff;
+    }
+    
+    .menu br {
+        display: none; /* Quitamos espacios vacíos */
+    }
+
+    .cierre-sesion a {
+        border-bottom: none;
+        background-color: #fff0f0; /* Fondo sutil rojo para el cierre */
+    }
+
+    .chk-menu-toggle:checked + .menu {
+        max-height: 300px; /* Altura máxima suficiente para albergar los links */
+    }
+
+    /* Reorganización de tablas internas para que no se rompan */
+    .seccion-formulario table, .seccion-formulario tr, .seccion-formulario td,
+    .ficha-medica table, .ficha-medica tr, .ficha-medica td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .seccion-formulario td, .ficha-medica td {
+        border: none;
+        padding: 6px 0;
+    }
+    
+    .contenido {
+        padding: 15px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contenido table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Permite deslizar la tabla con el dedo si es muy ancha */
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-titulo h1 {
+        font-size: 18px;
+    }
+    
+    .fila-tarjetas {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
 }

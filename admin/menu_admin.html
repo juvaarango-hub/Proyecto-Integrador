@@ -3,6 +3,7 @@
 <head>
     <title>Inicio Admin - VetControl</title>
     <link rel="stylesheet" href="../estilos.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
@@ -16,15 +17,18 @@
     </div>
 
     <div class="contenedor">
+
+        <label for="btn-menu-toggle" class="btn-menu-hamburguesa">☰ Menú</label>
+        <input type="checkbox" id="btn-menu-toggle" class="chk-menu-toggle">
+
         <div class="menu">
-            <a href="menu_admin.html"><b>Inicio</b></a>
+            <a href="menu_admin.html">Inicio</a>
             <a href="admin_cliente.html">Gestionar Clientes</a>
             <a href="admin_mascota.html">Gestionar Mascotas</a>
             <a href="admin_historia.html">Historia Clínica</a>
             <br>
-
             <div class="cierre-sesion">
-            <a href="../index.html" >Cerrar Sesión</a>
+                <a href="../index.html">Cerrar Sesión</a>
             </div>
         </div>
 
